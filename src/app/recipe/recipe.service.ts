@@ -1,11 +1,12 @@
 import { Recipe } from './recipe.model';
-import { EventEmitter, Injectable } from '@angular/core';
+import { Injectable } from '@angular/core';
 import { Ingredient } from '../shared/ingredient.model';
 import { ShoppinglistService } from '../shopping-list/shopinglist.service';
 
+
 @Injectable()
 export class RecipeService {
-    recipeSelected = new EventEmitter<Recipe>();
+
     private recipes: Recipe[] = [new Recipe('Dosa', 'A roasted Dosa',
         'https://upload.wikimedia.org/wikipedia/commons/0/0b/Dosa_and_ghee.jpg',
         [new Ingredient('Minapagullu', 1), new Ingredient('Rice', 1)]),
